@@ -1,0 +1,21 @@
+gpu: 'cuda:1'
+---
+audio:
+  n_fft: 512
+  num_freq: 257 # n_fft//2 + 1
+  sample_rate: 16000
+  hop_length: 160
+  win_length: 400
+  min_level_db: -100.0
+  ref_level_db: 20.0
+  preemphasis: 0.97
+  power: 0.30
+---
+embedder:
+  num_mels: 40
+  n_fft: 512
+  emb_dim: 256
+  lstm_hidden: 768
+  lstm_layers: 3
+  window: 10
+  stride: 20
